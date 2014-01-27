@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Super Lucky</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">SAFE\nIS\nSEXY</string>
+    <string name="profile">Profile Picture</string>
+    <string name="save_contact">Save Lover</string>
+    <string name="take_picture">Take Picture</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_fullscreen">Super Lucky</string>
+    <string name="attach">Show lab reports</string>
+    <string name="title_activity_sms">sms</string>
+
+
+
+
+    <!--Create & Edit com.usc.mylab.Profile -Other string resources also defined in this file…
+     author- Ross-->
+
+    <string name="testsource1">Test Source 1</string>
+    <string name="testsource2">Test Source 2</string>
+    <string name="mylabhometest">myLab Home Test</string>
+    <string name="testsource3">Test Source 3</string>
+    <string name="testsource4">Test Source 4</string>
+
+
+</resources>

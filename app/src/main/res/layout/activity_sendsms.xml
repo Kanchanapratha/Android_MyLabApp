@@ -1,0 +1,193 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".myLabProfile">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <TextView android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:textColor="#33b5e5"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:gravity="center"
+        android:text="@string/dummy_content" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|bottom">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="75dp"
+            android:id="@+id/prospect"
+            android:layout_gravity="left|top"
+            android:contentDescription="@string/profile"
+            android:src="@drawable/profile"
+            android:baselineAlignBottom="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="25dp"
+            android:layout_above="@+id/textView"
+            android:paddingLeft="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Name"
+            android:id="@+id/prospectname"
+            android:layout_gravity="center_horizontal|top"
+            android:layout_marginTop="54dp"
+            android:layout_alignTop="@+id/prospect"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="99999999999"
+            android:id="@+id/phone"
+            android:layout_gravity="left|top"
+            android:layout_alignParentStart="false"
+            android:layout_marginTop="33dp"
+            android:layout_below="@+id/prospectname"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:textSize="25dp" />
+
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:layout_marginBottom="32dp"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/textView"
+                android:layout_centerVertical="true"
+                android:textColor="#caffef"
+                android:paddingLeft="10dp"
+                android:textSize="25dp" />
+
+
+
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Send SMS"
+                android:id="@id/send"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/prospectname"
+                android:layout_marginBottom="30dp" />
+
+            <Switch
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Save to Contacts"
+                android:id="@+id/switch1"
+                android:checked="false"
+                android:layout_below="@+id/textView"
+                android:layout_toLeftOf="@+id/phone"
+                android:layout_alignParentEnd="true"
+                android:paddingLeft="10dp"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show myLab Results for"
+                android:id="@+id/textView2"
+                android:textColor="#f3faff"
+                android:layout_below="@+id/switch1"
+                android:layout_alignLeft="@+id/switch1"
+                android:layout_marginTop="30dp"
+                android:paddingLeft="10dp"
+                android:textSize="15dp" />
+            <RadioGroup
+                android:id="@+id/radioSex"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/textView2"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp">
+
+                <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1h"
+                android:id="@+id/radioButton"
+                android:checked="false"
+                />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12h"
+                    android:id="@+id/radioButton2"
+                    android:layout_below="@+id/textView2"
+                    android:layout_toRightOf="@+id/radioButton"
+                    android:checked="false" />
+
+                <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1d"
+                android:id="@+id/radioButton3"
+                android:layout_below="@+id/textView2"
+                android:layout_toRightOf="@+id/radioButton2"
+                android:checked="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1W"
+                android:id="@+id/radioButton4"
+                android:layout_alignTop="@+id/radioButton3"
+                android:layout_toRightOf="@+id/radioButton3"
+                android:checked="false" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:id="@+id/textView3"
+                android:layout_alignTop="@+id/textView"
+                android:layout_alignLeft="@+id/prospectname"
+                android:textSize="15dp"
+                android:layout_alignParentEnd="true"
+                android:paddingRight="10dp" />
+
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+
+</FrameLayout>
